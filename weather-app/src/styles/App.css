@@ -1,5 +1,6 @@
 .App {
   height: 100vh;
+  max-height: 100vh;
   text-align: center;
   background-color: #282c34;
 }
@@ -24,5 +25,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 55vh;
+  height: 60vh;
+}
+
+
+/* Formatting for mobile devices */
+@media screen and (max-width: 1080px) {
+  .App {
+    max-height: 100vh;
+  }
+  .Header h1 {
+    font-size: 40px;
+    color: white;
+  }
 }
