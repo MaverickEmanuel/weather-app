@@ -1,13 +1,46 @@
-.Weather {
-    background-color: #282c34;
-    height: 80vh;
+.Weatherdata {
+    background-color: white;
+    width: 30vw;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
 }
 
-.header {
-    margin-bottom: 1vmin;
+.Main {
+    padding-top: 0px;
+    padding-bottom: 25px;
+}
+
+.Temperature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Main h1 {
+    color: black;
+    font-size: 32px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.Main h2 {
+    color: black;
+    font-size: 28px;
+}
+
+.Main p {
+    color: black;
+    font-size: 24px;
+}
+
+.Detailed p {
+    color: black;
+    font-size: 18px;
 }

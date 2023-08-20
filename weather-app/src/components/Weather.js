@@ -1,21 +1,23 @@
 import React from "react";
 import '../styles/Weather.css';
-import { Card } from 'semantic-ui-react';
 import moment from 'moment';
 
 const Weather = ({weatherData}) => (
-    <Card>
-        <Card.Content>
-            <Card.Header className="header">City Name: {weatherData.name}</Card.Header>
-            <p>Temperature: {weatherData.main.temp} &deg;C</p>
+    <div className="Weatherdata">
+        <div className="Main">
+            <h1>{weatherData.name}</h1>
+            <div className="Temperature">
+                <img src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt={weatherData.weather[0].description}/><h2>{Math.round(weatherData.main.temp)} &deg;C</h2>
+            </div>
+            <p>{weatherData.weather[0].main}</p>
+        </div>
+        <div className="Detailed">
+            <p>Humidity: {weatherData.main.humidity} %</p>
             <p>Sunrise: {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString('en-IN')}</p>
             <p>Sunset: {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString('en-IN')}</p>
-            <p>Description: {weatherData.weather[0].main}</p>
-            <p>Humidity: {weatherData.main.humidity} %</p>
-            <p>Day: {moment().format('dddd')}</p>
-            <p>Date: {moment().format('LL')}</p>
-        </Card.Content>
-    </Card>
+            <p><b>{moment().format('LL')}</b></p>
+        </div>
+    </div>
 )
 
 export default Weather;
